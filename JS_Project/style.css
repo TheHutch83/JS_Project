@@ -1,0 +1,70 @@
+/* .Search_Function {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+/*400 screen*/
+
+:root {
+  background: linear-gradient(90deg, #3ddad8, #2a93d5, #135589);
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .Weather_Container {
+  text-align: center;
+  width: 400px;
+  background: red;
+  max-width: 90%;
+  margin: 100px;
+  border-radius: 20px;
+  padding: 40px 35px;
+} */
+
+/* .Search_Box {
+  background-color: red;
+}
+
+.Search_Input {
+  color: red;
+}
+
+.svg_container svg {
+  max-width: 100px;
+}
+
+.Summary_Box {
+  background-color: red;
+  width: 6000px;
+  color: red;
+} */
+
+/*.Weather_Container div div {
+  width: 100%;
+  background: #f0f8ff red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}*/
+
+/* .Search_Input {
+  border: 0;
+  outline: 0;
+  padding: 60px 70px;
+  height: 100px;
+  border-radius: 100px;
+  margin-right: 16px;
+  font-size: 18px;
+} */
+
+/* .Search_Button {
+  border: 0;
+  outline: 0;
+  border-radius: 50px; /*tested to be a circle*/
+/*width: 60px;
+  height: 60px;
+} */

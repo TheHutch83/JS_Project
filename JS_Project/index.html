@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>and now... The Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./cityWeather.js"></script>
+    <!-- <script type="module" src="./Location.js"></script>
+    <script type="module" src="./entry.js"></script> -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./Media_Folder" /> -->
+    <!-- <link rel="stylesheet" href="./spinner.css" /> -->
+  </head>
+  <body>
+    <main>
+      <div id="Weather_Container">
+        <h1>Weather App</h1>
+
+        <div id="Search_Box">
+          <input type="text" id="City_Input" placeholder="Enter a City Name" />
+
+          <button id="get-weather-button">
+            Get Weather
+            <!-- <svg
+                class="svg-icon"
+                style="
+                  width: 1em;
+                  height: 1em;
+                  vertical-align: middle;
+                  fill: currentColor;
+                  overflow: hidden;
+                "
+                viewBox="0 0 1024 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1013.9 975.4L747.3 708.8c66.3-75.3 106.9-173.7 106.9-281.7C854.2 191.6 662.6 0 427.1 0S0 191.6 0 427.1s191.6 427.1 427.1 427.1c107.1 0 204.8-39.9 279.9-105.2l266.6 266.6c5.6 5.6 12.8 8.3 20.1 8.3s14.6-2.8 20.1-8.3c11.2-11.1 11.2-29.1 0.1-40.2z m-957-548.3C56.9 223 223 56.9 427.1 56.9S797.3 223 797.3 427.1 631.2 797.3 427.1 797.3 56.9 631.2 56.9 427.1z"
+                  fill="#838383"
+                />
+              </svg> -->
+          </button>
+          <button id="getCurrentLocation">Location</button>
+        </div>
+        <div id="Summary_Box">
+          <h2 id="city">City</h2>
+          <h3 id="Current_Temp">c</h3>
+          <p id="High_Temp">H:c</p>
+          <p id="Low_Temp">L: c</p>
+          <div id="24HourSum">
+            <p>Next 24 Hours</p>
+          </div>
+          <div id="col_1">
+            <div id="svg_container"></div>
+            <div id="10-day_Forecast">
+              <p id="10-day_Forecast">10-Day Forecast</p>
+            </div>
+            <div id="Moon_Cycle">
+              <p id="Moon_Cycle">Moon Cycle</p>
+            </div>
+          </div>
+          <div id="col_2">
+            <div id="Wind">
+              <p id="Wind">Wind</p>
+              <p id="Wind_Speed">Wind Speed mph</p>
+              <p id="Gusts">Gusts mph</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<!--
+      
+          <div class="Current_Summary">
+            <h2>Whats the weather doing</h2>
+          </div>
+          <div class="High_Temperature">
+            <h2>High</h2>
+          </div>
+          <div class="Low_Temperature">
+            <h2>Low</h2>
+          </div>
+        </div>
+      </section>
+      <section id="Rain_Forecast">
+        <div class="Rain_Forecast">
+          <h2>Rain Forecast</h2>
+        </div>
+      </section>
+      <section id="Hourly_Forecast">
+        <div class="Hourly_Forecast">
+          <h2>Hourly Forecast</h2>
+        </div>
+      </section>
+      <section id="Precipitation_Map">
+        <div class="Precipitation_Map">
+          <h2>Precipiation Map</h2>
+        </div>
+      </section>
+      <section id="5_Day_Forecast">
+        <div class="5_Day_Forecast">
+          <h2>5-Day Forecast</h2>
+        </div>
+      </section>
+      <section id="Air_Pollution">
+        <div class="Air_Pollution">
+          <h2>Air Pollution</h2>
+        </div>
+      </section>
+      <section id="UV_Index">
+        <div class="UV_Index">
+          <h2>UV Index</h2>
+        </div>
+      </section>
+      <section id="Sunrise">
+        <div class="Sunrise">
+          <h2>Sunrise</h2>
+        </div>
+      </section>
+      <section id="Wind">
+        <div class="Wind">
+          <h2>Wind</h2>
+        </div>
+      </section>
+      <section id="Feels_Like">
+        <div class="Feels_Like">
+          <h2>Feels Like</h2>
+        </div>
+      </section>
+      <section id="Precipiation_Last_24">
+        <div class="Precipiation_Last_24">
+          <h2>Precipiation Last 24 hours</h2>
+        </div>
+      </section>
+      <section id="Visibility">
+        <div class="Visibility">
+          <h2>Visibility</h2>
+        </div>
+      </section>
+      <section id="Moon">
+        <div id="Moon">
+          <h2>Moon Information</h2>
+        </div>
+      </section>
+      <section id="24_Averages">
+        <div class="24_Averages">
+          <h2>Last 24 hour averages</h2>
+        </div>
+      </section>
+      <section id="Air_Pressure">
+        <div class="Air_Pressure">
+          <h2>Air Pressure</h2>
+        </div>
+      </section>
+      -->
+
+<!-- Mobile first <= 400
+      Search function box needed
+      search button needed
+      location services button - press to activate local weather Current_Weather_Information
+      Locaion input from location sercices
+      temp in celsius
+      summary of weather now - rain / drizzle / windy etc
+      high temp and low temp
+      rain / precipitation hour forecast (if allowed in free)
+      hourly forecast like now time plus 1, plus 2 etc
+      map? of cloud cover of area and rain cloud
+      5 day forecast
+      air pollution 
+      UV index
+      Sunset time
+      Wind speed direction gusts -->
+
+<!-- iPad second +400 <1200
+      search box with search magnifying glass in and location button
+      Large summary box with 
+        temp in celsius 
+        summary of weather now - rain / drizzle / windy etc
+        high temp and low temp
+      Box left
+        light rain forecast next hour
+      box right
+        rain / weather map (live?)
+      second box left
+        5 day forescast (as per free)
+      second box right  
+        air pollution 
+      third box right 
+        wind speed / direction / gusts
+      fourth box right  
+        UV index
+        (apple has two boxes here)
+          sunset time
+      third box left
+        moon status
+      fifth box right   
+        temperature feels like
+        (second box right)
+          rain fall in last 24 hours
+      fourth box left
+        visibility
+        (second box)
+          Humidity
+      sixth box right
+        air pressure
+          (second box)
+            average temp -->
+
+<!-- apple desktop is ther same as ipad -->
